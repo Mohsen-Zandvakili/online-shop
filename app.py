@@ -16,6 +16,7 @@ app.register_blueprint(user)
 
 # configure the SQLite database, relative to the app instance folder
 app.config["SQLALCHEMY_DATABASE_URI"] = config.SQLALCHEMY_DATABASE_URI
+app.config["SECRET_KEY"] = config.SECRET_KEY
 # initialize the app with the extension
 extentions.db.init_app(app)
 
