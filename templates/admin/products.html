@@ -30,7 +30,7 @@
 <hr><br>
 
 <form action="#" method="post" enctype="multipart/form-data">
-   
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
     <input type="file" name="cover"><br>
     <input type="text" name="name" placeholder="نام محصول"><br>
     <textarea name="description" placeholder="توضیحات"></textarea><br>

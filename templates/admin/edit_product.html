@@ -6,7 +6,7 @@
 
 {% block body %}
 <form action="#" method="post" enctype="multipart/form-data">
-   
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
     <input type="file" name="cover" ><br>
     <input type="text" name="name" placeholder="نام محصول" value="{{ product.name }}"><br>
     <textarea name="description" placeholder="توضیحات">{{ product.description }}</textarea><br>
