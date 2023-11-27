@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+
+{% block header %}
+<title>ُEdit Products</title>
+{% endblock %} 
+
+{% block body %}
+<form action="#" method="post" enctype="multipart/form-data">
+   
+    <input type="file" name="cover" ><br>
+    <input type="text" name="name" placeholder="نام محصول" value="{{ product.name }}"><br>
+    <textarea name="description" placeholder="توضیحات">{{ product.description }}</textarea><br>
+    <input type="number" name="price" placeholder="قیمت محصول" value="{{ product.price }}"><br>
+    <div >
+        <label for="active"> فعال </label>
+        <input style="margin: 5px;" value="1" id="active" type="checkbox" name="active" {{ 'checked' if product.active == 1 }}><br>
+    </div>
+    <input type="submit" value="افزودن">
+</form>
+{% endblock %}
