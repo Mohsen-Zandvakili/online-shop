@@ -1,10 +1,11 @@
 {% extends 'base.html' %} 
 
 {% block header %}
-<title>ُEdit Products</title>
+<title>Edit Products</title>
 {% endblock %} 
 
 {% block body %}
+<img style="width: 100px;" src="/static/cover/{{ product.id }}.jpg">
 <form action="#" method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
     <input type="file" name="cover" ><br>
